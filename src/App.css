@@ -1,0 +1,38 @@
+html {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: none;
+}
+body {
+  height: 100%;
+
+}
+#root {
+  height: 100%;
+}
+
+.bg-myColor {
+  min-height: 5rem;
+  background: linear-gradient(in oklab, #2D5C7F , #2D5C7F, #2D5C7F, transparent);
+  opacity: 97%;
+  
+  }
+
+.nav-link, .navbar-brand {
+  color: #FF8F56;
+}
+
+.whole-footer {
+  color: #2D5C7F;
+}
+
+.lower-footer {
+  min-height: 5rem;
+  background: linear-gradient(transparent,#2D5C7F, #2D5C7F, #2D5C7F, #2D5C7F);
+  opacity: 96%;
+  color: #FF8F56;
+}
+
+.icon {
+  color: #FFF1A8,
+}
