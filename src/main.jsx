@@ -9,6 +9,7 @@ import { ChakraBaseProvider } from "@chakra-ui/react";
 import About from "./About";
 import App from "./App";
 import NavBar from "./NavBar";
+import Homepage from "./HomePage";
 
 import Blog from "./Card";
 import Projects from "./Projects";
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <Homepage />,
         errorElement: <ErrorPage />,
       },
       {
