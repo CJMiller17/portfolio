@@ -41,36 +41,28 @@ const Homepage = () => {
               Welcome to My Portfolio
             </Heading>
             <Text color="gray.500" fontSize="xl">
-              Feel free to look around and get to know me. There are a lot of places to look at my projects, blog,
-              and more.
+              Feel free to look around and get to know me. There are a lot of
+              places to look at my projects, blog, and more.
             </Text>
 
-            <ButtonGroup
-              justifyContent="space-between"
-            >
-              <Button
-                variant="solid"
-                as={Link}
-                to="/about"
-              >
+            <ButtonGroup justifyContent="space-between">
+
+              <Button variant="solid" as={Link} to="/about">
                 About
               </Button>
 
-              <Button
-                variant="outline"
-                as={Link}
-                to="/register"
-              >
+              <Button variant="outline" as={Link} to="/blog">
                 Blog
               </Button>
 
-              <Button
-                variant="outline"
-                as={Link}
-                to="/about"
-              >
-                About
+              <Button variant="outline" as={Link} to="/projects">
+                Projects
               </Button>
+
+              <Button variant="outline" as={Link} to="/resume">
+                Résumé
+              </Button>
+
             </ButtonGroup>
           </Stack>
         </Box>
