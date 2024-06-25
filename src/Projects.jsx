@@ -58,7 +58,7 @@ export default function ProjectsCarousel() {
   const cards = [
     {
       title: "Adventure Game",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "This is our capstone project that demonstrated our .",
       image: Prince,
       link: "https://the-little-prince-returns.vercel.app/",
     },
@@ -70,7 +70,7 @@ export default function ProjectsCarousel() {
     },
     {
       title: "Random Story Generator",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "This is a sill story generator based of the book The Gruffalo.",
       image: StoryGen,
       link: "https://cjmiller17.github.io/Silly-Story/",
     },
@@ -100,13 +100,13 @@ export default function ProjectsCarousel() {
     // },
     {
       title: "Restaurant",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "This is a Hungry Little Caterpillar themed restaurant, that pulls menu items from an API.",
       image: Restaurant,
       // link: "",
     },
     {
       title: "To Do List",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "This is a Honey-Do list to help keep your life organized.",
       image: ToDoList,
       // link: "",
     },
@@ -183,7 +183,7 @@ export default function ProjectsCarousel() {
               backgroundImage={`url(${card.image})`}
             >
               {/* This is the block you need to change, to customize the caption */}
-              <Container size="container.lg" height="600px" position="relative">
+              <Container pt="15rem" size="xl" height="600px" display="flex" justifyContent="center" alignContent="center">
                 <Stack
                   spacing={6}
                   p="1.3rem"
@@ -191,7 +191,8 @@ export default function ProjectsCarousel() {
                   w={"full"}
                   maxW={"lg"}
                   position="absolute"
-                  top="50%"
+                  top={{ base: "xl", md: "xl", lg: "xl" }}
+                  left={{ base: "xl", md: "xl", lg: "xl" }}
                   // transform="translate(50%, -50%)"
                   background="radial-gradient(circle, #B5BAD0, #416788)"
                   color="white"
