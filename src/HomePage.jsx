@@ -18,8 +18,8 @@ const Homepage = () => {
           py={{ base: "0", sm: "8" }}
           px={{ base: "4", sm: "10" }}
           bg={{ base: "transparent", sm: "white" }}
-          boxShadow="dark-lg"
           borderRadius="xl"
+          boxShadow="dark-lg"
         >
           <Stack spacing="6">
             <Heading
