@@ -57,6 +57,12 @@ export default function ProjectsCarousel() {
   // This can be static or loaded from a server
   const cards = [
     {
+      title: "Adventure Game",
+      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: Prince,
+      link: "https://the-little-prince-returns.vercel.app/",
+    },
+    {
       title: "Birding Website",
       text: "This was our very first project where we applied out HTML and CSS knowledge to create a fake website.",
       image: Birding,
@@ -110,12 +116,6 @@ export default function ProjectsCarousel() {
     //   image: Social,
     //   link: "",
     // },
-    {
-      title: "Adventure Game",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: Prince,
-      link: "https://the-little-prince-returns.vercel.app/",
-    },
   ];
 
   return (
@@ -192,7 +192,7 @@ export default function ProjectsCarousel() {
                   maxW={"lg"}
                   position="absolute"
                   top="50%"
-                  transform="translate(70%, -50%)"
+                  transform="translate(50%, -50%)"
                   background="radial-gradient(circle, #B5BAD0, #416788)"
                   color="white"
                   textAlign="center"
