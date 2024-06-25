@@ -120,7 +120,7 @@ export default function ProjectsCarousel() {
 
   return (
     <Box
-      pt="4rem"
+      pt="1.5rem"
       position={"relative"}
       height={"100vh"}
       width={"full"}
@@ -192,13 +192,18 @@ export default function ProjectsCarousel() {
                   maxW={"lg"}
                   position="absolute"
                   top="50%"
-                  transform="translate(50%, -50%)"
+                  // transform="translate(50%, -50%)"
                   background="radial-gradient(circle, #B5BAD0, #416788)"
                   color="white"
                   textAlign="center"
                   textShadow="2px 2px 15px gray"
                 >
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                  <Heading
+                    fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                    display="flex"
+                    alignSelf="center"
+                    justifySelf="center"
+                  >
                     {card.title}
                   </Heading>
                   <Text fontSize={{ base: "md", lg: "lg" }}>{card.text}</Text>
