@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import { Container, Box } from "@chakra-ui/react";
+import { Container, Box, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react";
+import {HamburgerIcon} from '@chakra-ui/icons'
+
+
 
 
 function NavBar() {
@@ -7,27 +10,32 @@ function NavBar() {
 
   return (
     <>
-      <Box className="navbar" bg="myColor" variant="dark" sticky="top">
-        {/* <Container >
-          <Link className="navbar-brand" to="/">
-            CM
-          </Link>
-          <Nav className="me-auto">
-            <Link className="nav-link" to="/about">
-              About
-            </Link>
-            <Link className="nav-link" to="/blog">
-              Blog
-            </Link>
-            <Link className="nav-link" to="/projects">
-              Projects
-            </Link>
-            <Link className="nav-link" to="/resume">
-              Resume
-            </Link>
-          </Nav>
-        </Container> */}
-      </Box>
+      <Menu
+      >
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          variant="solid"
+          p=".5rem"
+          icon={<HamburgerIcon />}
+          boxShadow="dark-lg"
+          borderRadius="md"
+        />
+        <MenuList>
+          <MenuItem>
+            New Tab
+          </MenuItem>
+          <MenuItem>
+            New Window
+          </MenuItem>
+          <MenuItem>
+            Open Closed Tab
+          </MenuItem>
+          <MenuItem>
+            Open File...
+          </MenuItem>
+        </MenuList>
+      </Menu>
     </>
   );
 }
