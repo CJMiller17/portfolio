@@ -7,24 +7,29 @@ import {
   Text,
   ButtonGroup,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 const Homepage = () => {
   
   return (
-    <Container maxW="2xl" py={{ base: "20" }} px={{ base: "0", sm: "8" }}>
+    <Container
+      zIndex="10"
+      maxW="2xl"
+      py={{ base: "20" }}
+      px={{ base: "0", sm: "8" }}
+      bg="transparent"
+    >
       <Stack spacing="8">
         <Box
           py={{ base: "0", sm: "8" }}
           px={{ base: "4", sm: "10" }}
-          bg={{ base: "transparent", sm: "white" }}
-          borderRadius="xl"
+          bg="transparent"
+          borderRadius="md"
           boxShadow="dark-lg"
         >
           <Stack spacing="6">
             <Heading
-              fontFamily="Lobster Two"
-              color="#3C6286"
+              fontFamily="Koh Santepheap"
+              color="white"
               textAlign="center"
               fontSize="6xl"
             >
@@ -40,30 +45,10 @@ const Homepage = () => {
             >
               Welcome to My Portfolio
             </Heading>
-            <Text color="gray.500" fontSize="xl">
+            <p color="gray.500" fontSize="xl">
               Feel free to look around and get to know me. There are a lot of
               places to look at my projects, blog, and more.
-            </Text>
-
-            <ButtonGroup justifyContent="space-between">
-
-              <Button variant="solid" as={Link} to="/about">
-                About
-              </Button>
-
-              <Button variant="outline" as={Link} to="/blog">
-                Blog
-              </Button>
-
-              <Button variant="outline" as={Link} to="/projects">
-                Projects
-              </Button>
-
-              <Button variant="outline" as={Link} to="/resume">
-                Résumé
-              </Button>
-
-            </ButtonGroup>
+            </p>
           </Stack>
         </Box>
       </Stack>

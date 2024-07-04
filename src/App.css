@@ -1,10 +1,3 @@
-html {
-  height: 100%;
-  overflow: auto;
-  overscroll-behavior: none;
-  background-color:  #416788;
-}
-
 .koh-santepheap-thin {
   font-family: "Koh Santepheap", serif;
   font-weight: 100;
@@ -36,45 +29,85 @@ html {
 }
 
 
-body {
-  height: 100%;
 
-}
-#root {
-  height: 100%;
+/* FIRE FLIES */
+
+/*  */
+
+.firefly {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 0.4vw;
+  height: 0.4vw;
+  margin: -0.2vw 0 0 9.8vw;
+  animation: ease 200s alternate infinite;
+  pointer-events: none;
 }
 
-.bg-myColor {
-  min-height: 5rem;
-  background: linear-gradient(in oklab, #2D5C7F , #2D5C7F, #2D5C7F, transparent);
-  opacity: 97%;
-  
+.firefly::before,
+.firefly::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: -10vw;
+}
+
+.firefly::before {
+  background: black;
+  opacity: 0.4;
+  animation: drift ease alternate infinite;
+}
+
+.firefly::after {
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 0vw 0vw yellow;
+  animation: drift ease alternate infinite, flash ease infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: rotate(0deg);
   }
-
-.nav-link, .navbar-brand {
-  color: #FF8F56;
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.whole-footer {
-  color: #2D5C7F;
+@keyframes flash {
+  0%, 30%, 100% {
+    opacity: 0;
+    box-shadow: 0 0 0vw 0vw yellow;
+  }
+  5% {
+    opacity: 1;
+    box-shadow: 0 0 2vw 0.4vw yellow;
+  }
 }
 
-.lower-footer {
-  min-height: 5rem;
-  background: linear-gradient(transparent,#2D5C7F, #2D5C7F, #2D5C7F, #2D5C7F);
-  opacity: 96%;
-  color: #FF8F56;
+/* Randomize Fireflies Motion */
+@keyframes move1 {
+  0% {
+    transform: translateX(-50vw) translateY(-50vh) scale(0.25);
+  }
+  100% {
+    transform: translateX(-50vw) translateY(-50vh) scale(1);
+  }
 }
 
-.icon {
-  color: #FFF1A8,
+/* Repeat the above @keyframes block and .firefly:nth-child(n) styles for move2 to move15 */
+.firefly:nth-child(1) {
+  animation-name: move1;
+}
+.firefly:nth-child(1)::before {
+  animation-duration: 18s;
+}
+.firefly:nth-child(1)::after {
+  animation-duration: 18s, 5291ms;
+  animation-delay: 0ms, 7773ms;
 }
 
-/* 
-
-Navy        #416788
-Slate Blue  #7389AE
-Gray        #B5BAD0
-Mint        #81D2C7
-
-*/
+/* Repeat the above .firefly:nth-child(n) styles for 2 to 15 */
