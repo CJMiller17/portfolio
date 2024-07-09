@@ -13,28 +13,22 @@ function Contact() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      background="radial-gradient(circle, #B5BAD0, #416788)"
-      height="100vh"
+      background="transparent"
+      height="70vh"
     >
       <CardBody
-        py={{ base: "0", sm: "8" }}
-        px={{ base: "4", sm: "4" }}
-        bg="linear-gradient(to bottom, #d3d3d3, gray)"
+        // py={{ base: "0", sm: "8" }}
+        // px={{ base: "4", sm: "4" }}
+        bg="linear-gradient(to bottom, black, gray)"
         borderRadius="lg"
         boxShadow="dark-lg"
         margin="3rem"
       >
-        <Heading
-          fontSize="7rem"
-          color="white"
-          m="1rem"
-          fontFamily="Koh Santepheap"
-        >
+        <Text fontSize="7rem" fontFamily="Strike Brush" m="1rem" letterSpacing="2px">
           Cody Miller
-        </Heading>
+        </Text>
         <Text
           textAlign="center"
-          fontFamily="Koh Santepheap"
           color="white"
           fontSize="1.5rem"
           fontWeight="semi-bold"
@@ -48,36 +42,35 @@ function Contact() {
           margin="1rem"
         >
           <IconButton
-            variant="solid"
-            colorScheme="teal"
+            variant="ghost"
             aria-label="Done"
             fontSize="6.7rem"
-            icon={<MdEmail color="#81D2C7" />}
-            _hover={{ bgColor: "white" }}
+            icon={<MdEmail color="white" />}
             as={Link}
             href="mailto:C.JMiller17@yahoo.com"
             target="_blank"
+            _hover={{
+              bgGradient: "transparent"
+            }}
           />
 
           <IconButton
-            variant="solid"
-            colorScheme="teal"
+            variant="ghost"
             aria-label="Done"
             fontSize="5.7rem"
-            icon={<FaLinkedin color="#81D2C7" />}
-            _hover={{ bgColor: "white" }}
+            icon={<FaLinkedin color="white" />}
+            _hover={{ bgColor: "transparent" }}
             as={Link}
             href="https://www.linkedin.com/in/cjmiller17/"
             target="_blank"
           />
 
           <IconButton
-            variant="solid"
-            colorScheme="teal"
+            variant="ghost"
             aria-label="Done"
             fontSize="5.7rem"
-            icon={<FaGithub color="#81D2C7" />}
-            _hover={{ bgColor: "white" }}
+            icon={<FaGithub color="white" />}
+            _hover={{ bgColor: "transparent" }}
             as={Link}
             href="https://github.com/CJMiller17"
             target="_blank"

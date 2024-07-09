@@ -31,9 +31,9 @@ const customTheme = extendTheme({
     global: {
       body: {
         background:
-          "linear-gradient(-45deg, #FFC700, #7389AE, #416788, #81D2C7)",
+          "linear-gradient(-45deg, #219C90, #FFC700, #EE4E4E, #FFF455)",
         backgroundSize: "400% 400%",
-        animation: "gradient 15s ease infinite",
+        animation: "gradient 12s ease infinite",
         height: "100vh",
         margin: 0,
       },

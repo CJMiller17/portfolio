@@ -36,7 +36,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 10000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -56,19 +56,19 @@ export default function ProjectsCarousel() {
   const cards = [
     {
       title: "Adventure Game",
-      text: "This is our capstone project that demonstrated our .",
+      text: "Developed an immersive adventure game with a seamlessly integrated front-end and back-end, showcasing proficiency in full-stack development. This project honed my skills in creating interactive, user-driven experiences with real-time data management.",
       image: Prince,
       link: "https://the-little-prince-returns.vercel.app/",
     },
     {
       title: "Birding Website",
-      text: "This was our very first project where we applied out HTML and CSS knowledge to create a fake website.",
+      text: "Created a visually stunning birding website featuring multiple navigable pages and clickable images, emphasizing aesthetic design and user experience. This project enhanced my understanding of front-end development and responsive design principles.",
       image: Birding,
       link: "https://cjmiller17.github.io/Birding/",
     },
     {
       title: "Random Story Generator",
-      text: "This is a sill story generator based of the book The Gruffalo.",
+      text: "Designed a captivating random story generator inspired by the children's book 'The Gruffalo,' demonstrating creativity in algorithmic storytelling. This project improved my ability to implement logic for dynamic content generation.",
       image: StoryGen,
       link: "https://cjmiller17.github.io/Silly-Story/",
     },
@@ -98,13 +98,13 @@ export default function ProjectsCarousel() {
     // },
     {
       title: "Restaurant",
-      text: "This is a Hungry Little Caterpillar themed restaurant, that pulls menu items from an API.",
+      text: "Built a functional restaurant website with an intuitive search bar that retrieves data from an external API, showcasing my API integration skills. This project strengthened my proficiency in asynchronous JavaScript and data fetching techniques.",
       image: Restaurant,
       // link: "",
     },
     {
       title: "To Do List",
-      text: "This is a Honey-Do list to help keep your life organized.",
+      text: "Developed an interactive to-do list application with editable input fields and dynamic color-changing status based on task deadlines, emphasizing task management and user interaction. This project advanced my knowledge of state management and real-time UI updates in JavaScript.",
       image: ToDoList,
       // link: "",
     },
@@ -123,7 +123,7 @@ export default function ProjectsCarousel() {
       height={"100vh"}
       width={"full"}
       overflow={"hidden"}
-      background="radial-gradient(circle, #B5BAD0, #416788)"
+      // background="radial-gradient(circle, #B5BAD0, #416788)"
     >
       {/* CSS files for react-slick */}
       <link
@@ -181,31 +181,44 @@ export default function ProjectsCarousel() {
               backgroundImage={`url(${card.image})`}
             >
               {/* This is the block you need to change, to customize the caption */}
-              <Container pt="15rem" size="xl" height="600px" display="flex" justifyContent="center" alignContent="center">
+              <Container
+                height="60px"
+                display="flex"
+                justifyContent="center"
+                alignContent="center"
+              >
                 <Stack
-                  spacing={6}
                   p="1.3rem"
-                  borderRadius="xl"
-                  w={"full"}
-                  maxW={"lg"}
+                  borderRadius="lg"
+                  maxW={"xs"}
                   position="absolute"
                   top={{ base: "xl", md: "xl", lg: "xl" }}
                   left={{ base: "xl", md: "xl", lg: "xl" }}
                   // transform="translate(50%, -50%)"
-                  background="radial-gradient(circle, #B5BAD0, #416788)"
+                  background="radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))"
                   color="white"
                   textAlign="center"
                   textShadow="2px 2px 15px gray"
                 >
-                  <Heading
+                  <Text
                     fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                    fontFamily="Strike Brush"
+                    letterSpacing="2px"
                     display="flex"
                     alignSelf="center"
                     justifySelf="center"
                   >
                     {card.title}
-                  </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }}>{card.text}</Text>
+                  </Text>
+                  <Text
+                    color="white"
+                    fontSize={{ base: "md", lg: "lg" }}
+                    _hover={{
+                      transform: "scale(1)"
+                    }}
+                  >
+                    {card.text}
+                  </Text>
                 </Stack>
               </Container>
             </Box>

@@ -10,40 +10,51 @@ function NavBar() {
       <Box
         display="flex"
         justifyContent="space-around"
-        bgGradient="linear(to-b, rgba(33, 156, 144, 0.3), rgba(33, 156, 144, 0.8), rgba(33, 156, 144, 1))"
+        bgGradient="linear(to-b, rgba(24, 25, 26, 0.3), rgba(24, 25, 26, 0.8), rgba(24, 25, 26, 1))"
         alignItems="center"
         boxShadow="2xl"
       >
-        <Text as={Link} to="/" p="0" minW="auto" mt=".3rem" bgColor="none">
-          <img
-            src={CMLogo}
-            alt="Home"
-            style={{
-              width: "80px",
-              height: "80px",
-              maxWidth: ["50px", "60px", "70px", "80px"], // Responsive widths
-              maxHeight: ["50px", "60px", "70px", "80px"], // Responsive heights
-            }}
-          />
+        <Text as={Link} to="/" fontFamily="Strike Brush" letterSpacing="2px">
+          Home
         </Text>
 
-        <Text as={Link} to="/about">
+        <Text
+          as={Link}
+          to="/about"
+          fontFamily="Strike Brush"
+          letterSpacing="2px"
+        >
           About
         </Text>
 
-        <Text as={Link} to="/blog">
+        <Text as={Link} to="/blog" fontFamily="Strike Brush">
           Blog
         </Text>
 
-        <Text as={Link} to="/projects">
+        <Text
+          as={Link}
+          to="/projects"
+          fontFamily="Strike Brush"
+          letterSpacing="2px"
+        >
           Projects
         </Text>
 
-        <Text as={Link} to="/resume">
+        <Text
+          as={Link}
+          to="/resume"
+          fontFamily="Strike Brush"
+          letterSpacing="2px"
+        >
           Résumé
         </Text>
 
-        <Text as={Link} to="/contact">
+        <Text
+          as={Link}
+          to="/contact"
+          fontFamily="Strike Brush"
+          letterSpacing="2px"
+        >
           Contact
         </Text>
       </Box>
