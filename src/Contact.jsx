@@ -15,6 +15,7 @@ function Contact() {
       justifyContent="center"
       background="transparent"
       height="70vh"
+      boxShadow="none"
     >
       <CardBody
         // py={{ base: "0", sm: "8" }}
@@ -24,7 +25,12 @@ function Contact() {
         boxShadow="dark-lg"
         margin="3rem"
       >
-        <Text fontSize="7rem" fontFamily="Strike Brush" m="1rem" letterSpacing="2px">
+        <Text
+          fontSize="7rem"
+          fontFamily="Strike Brush"
+          p="1rem"
+          letterSpacing="2px"
+        >
           Cody Miller
         </Text>
         <Text
@@ -32,6 +38,7 @@ function Contact() {
           color="white"
           fontSize="1.5rem"
           fontWeight="semi-bold"
+          m="1rem"
         >
           Feel free to contact me here:
         </Text>
@@ -42,21 +49,25 @@ function Contact() {
           margin="1rem"
         >
           <IconButton
+            className="icon-button"
             variant="ghost"
             aria-label="Done"
             fontSize="6.7rem"
+            mt="1.5rem"
             icon={<MdEmail color="white" />}
             as={Link}
             href="mailto:C.JMiller17@yahoo.com"
             target="_blank"
             _hover={{
-              bgGradient: "transparent"
+              bgGradient: "transparent",
             }}
           />
 
           <IconButton
+            className="icon-button"
             variant="ghost"
             aria-label="Done"
+            mt="1.5rem"
             fontSize="5.7rem"
             icon={<FaLinkedin color="white" />}
             _hover={{ bgColor: "transparent" }}
@@ -66,8 +77,10 @@ function Contact() {
           />
 
           <IconButton
+            className="icon-button"
             variant="ghost"
             aria-label="Done"
+            mt="1.5rem"
             fontSize="5.7rem"
             icon={<FaGithub color="white" />}
             _hover={{ bgColor: "transparent" }}

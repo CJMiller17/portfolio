@@ -14,8 +14,8 @@ function NavBar() {
         alignItems="center"
         boxShadow="2xl"
       >
-        <Text as={Link} to="/" fontFamily="Strike Brush" letterSpacing="2px">
-          Home
+        <Text as={Link} to="/" fontFamily="Zeyada" letterSpacing="2px" fontSize="2rem" mt=".5rem">
+          Cody Miller
         </Text>
 
         <Text
@@ -27,9 +27,9 @@ function NavBar() {
           About
         </Text>
 
-        <Text as={Link} to="/blog" fontFamily="Strike Brush">
+        {/* <Text as={Link} to="/blog" fontFamily="Strike Brush">
           Blog
-        </Text>
+        </Text> */}
 
         <Text
           as={Link}
