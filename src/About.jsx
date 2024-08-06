@@ -26,12 +26,12 @@ const About = () => {
           >
             <Stack spacing="6">
               <Heading
-                fontFamily="Strike Brush"
-                fontWeight="100"
+                fontFamily="Merriweather"
+                fontWeight="700"
                 textAlign="center"
                 fontSize="6xl"
                 m="0"
-                bgGradient="linear(to bottom, #FFF455, #FFC700, #EE4E4E)"
+                bgGradient="linear(to bottom, #FFF455, #FFC700, #EE6E4E)"
                 bgClip="text"
               >
                 A little about me
@@ -40,13 +40,13 @@ const About = () => {
                 <p>
                   My entire world changed on November 16th, 2023. My wife and I
                   found out that she was pregnant, and our whole world was about
-                  to be different. You see, I was a banker here in town and I quite
-                  liked my job. And although banking hours are amazing, I knew
-                  that I wouldn't be home as often as I would like. I didn't
-                  want to come home to stories about my sons first time crawling
-                  or walking. I didn't want to be told about his first words; I
-                  wanted to experience them. I wanted to be right there when
-                  they happened.
+                  to be different. You see, I was a banker here in town and I
+                  quite liked my job. And although banking hours are amazing, I
+                  knew that I wouldn't be home as often as I would like. I
+                  didn't want to come home to stories about my sons first time
+                  crawling or walking. I didn't want to be told about his first
+                  words; I wanted to experience them. I wanted to be right there
+                  when they happened.
                 </p>
               </div>
               <div className="about-section">
@@ -90,8 +90,8 @@ const About = () => {
                   Web Development might seem like an odd choice for someone who
                   is more like a humanitarian than a software engineer. However,
                   web development fits perfectly into who I am and where I would
-                  like to go. The internet creates opportunities that
-                  didn't exist just a generation ago. I don't have to work for a
+                  like to go. The internet creates opportunities that didn't
+                  exist just a generation ago. I don't have to work for a
                   non-profit, struggling to provide for my growing family, in
                   order to do non-profit work. As a web developer, I can work
                   anywhere in the world as I provide for my family and continue

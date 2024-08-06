@@ -34,18 +34,19 @@ const Homepage = () => {
         >
           <Stack spacing="6">
             <Heading
-              fontFamily="Strike Brush"
-              fontWeight="100"
+              fontFamily="Merriweather"
+              fontWeight="700"
               textAlign="center"
               fontSize="6xl"
               m="0"
-              bgGradient="linear(to bottom, #FFF455, #FFC700, #EE4E4E)"
+              bgGradient="linear(to bottom, #FFF455, #FFC700, #EE6E4E)"
               bgClip="text"
             >
               I am Cody Miller
             </Heading>
             <Heading
-              fontFamily="Montserrat Alternates"
+              fontFamily="Merriweather"
+              fontWeight="200"
               fontSize="1.7rem"
               color="white"
               mt="0"
@@ -54,9 +55,8 @@ const Homepage = () => {
             >
               Welcome to My Portfolio
             </Heading>
-            <p color="white" fontSize="xl">
-              Feel free to look around and get to know me. There are a lot of
-              places to look at my projects, blog, and more.
+            <p className="home-page-paragraph">
+              Feel free to look around and get to know me!
             </p>
           </Stack>
         </Box>
