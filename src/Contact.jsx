@@ -27,7 +27,7 @@ function Contact() {
       >
         <Text
           fontSize="7rem"
-          fontFamily="Strike Brush"
+          fontFamily="Montserrat"
           p="1rem"
           letterSpacing="2px"
         >

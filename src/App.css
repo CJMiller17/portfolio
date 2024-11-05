@@ -1,68 +1,14 @@
-.merriweather-light {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
 }
-
-.merriweather-regular {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.merriweather-bold {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.merriweather-black {
-  font-family: "Merriweather", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.merriweather-light-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.merriweather-regular-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.merriweather-bold-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.merriweather-black-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-
-.zeyada-regular {
-  font-family: "Zeyada", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 p {
   color: white;
-  font-family: "Merriweather";
+  font-family: "Montserrat";
   margin: 0;
-}
-
-.about-section p {
-    text-indent: -2.5rem; /* Reverse indentation */
-    padding-left: 2.3rem; /* Push the text to the right after negative indentation */
 }
 
 .home-page-paragraph {

@@ -34,7 +34,7 @@ const Homepage = () => {
         >
           <Stack spacing="6">
             <Heading
-              fontFamily="Merriweather"
+              fontFamily="Montserrat"
               fontWeight="700"
               textAlign="center"
               fontSize="6xl"
@@ -45,7 +45,7 @@ const Homepage = () => {
               I am Cody Miller
             </Heading>
             <Heading
-              fontFamily="Merriweather"
+              fontFamily="Montserrat"
               fontWeight="200"
               fontSize="1.7rem"
               color="white"
