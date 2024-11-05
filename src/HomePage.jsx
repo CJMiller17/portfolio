@@ -6,6 +6,7 @@ import {
   Stack,
   Text,
   ButtonGroup,
+  Image
 } from "@chakra-ui/react";
 
 const Homepage = () => {
@@ -22,9 +23,8 @@ const Homepage = () => {
         <Box
           py={{ base: "0", sm: "8" }}
           px={{ base: "4", sm: "10" }}
-          bg="rgba(24, 25, 26, 0.8)"
+          bg="#023047"
           borderRadius="md"
-          borderColor="white"
           border
           boxShadow="xl"
           style={{
@@ -50,14 +50,28 @@ const Homepage = () => {
               fontSize="1.7rem"
               color="white"
               mt="0"
+              mb="-.5rem"
               textAlign="center"
-              // textShadow="2px 1px 0px  gray"
             >
               Welcome to My Portfolio
             </Heading>
-            <p className="home-page-paragraph">
+            <Image
+              boxSize="250px"
+              objectFit="cover"
+              src="src/assets/HomePage.jpeg"
+              alt="A picture of myself holding my son. We are both wearing a blue sweater"
+              borderRadius="50px"
+              alignSelf="center"
+            />
+            <Text
+              fontFamily="Montserrat"
+              fontSize="lg"
+              fontWeight="250"
+              color="white"
+              textAlign="center"
+            >
               Feel free to look around and get to know me!
-            </p>
+            </Text>
           </Stack>
         </Box>
       </Stack>

@@ -67,7 +67,7 @@ const About = () => {
               bgGradient="linear(to bottom, #FFB703, #FB8500)"
               bgClip="text"
             >
-              A little about me
+              A Little About Me
             </Heading>
             {aboutSections.map((section, index) => (
               <Flex
@@ -83,7 +83,7 @@ const About = () => {
                   alt={section.imgAlt}
                   borderRadius="full"
                 />
-                <Text fontSize="lg" fontFamily="Montserrat" color="white" maxW="sm">
+                <Text fontSize="md" fontFamily="Montserrat" fontWeight="450" color="white" maxW="sm">
                   {section.text}
                 </Text>
               </Flex>

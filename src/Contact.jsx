@@ -20,7 +20,7 @@ function Contact() {
       <CardBody
         // py={{ base: "0", sm: "8" }}
         // px={{ base: "4", sm: "4" }}
-        bg="linear-gradient(to bottom, black, gray)"
+        bg="#023047"
         borderRadius="lg"
         boxShadow="dark-lg"
         margin="3rem"
@@ -40,7 +40,7 @@ function Contact() {
           fontWeight="semi-bold"
           m="1rem"
         >
-          Feel free to contact me here:
+          Get in touch with me here — I’d love to chat!
         </Text>
         <Stack
           direction="row"

@@ -122,6 +122,7 @@ export default function ProjectsCarousel() {
             display="flex"
             flexDirection="column"
             height="93%"
+            bg="#023047"
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -150,12 +151,16 @@ export default function ProjectsCarousel() {
             }
             <Stack p="4">
               <CardBody mt="-10" maxH="120px">
-                <Heading size="md" noOfLines={1}>
+                <Heading
+                  size="md"
+                  noOfLines={1}
+                  color="white"
+                >
                   {card.title}
                 </Heading>
                 <Text
                   fontSize=".9rem"
-                  color="black"
+                  color="white"
                   maxHeight="90px"
                   noOfLines={4}
                 >
