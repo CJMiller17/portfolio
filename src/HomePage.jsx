@@ -39,7 +39,7 @@ const Homepage = () => {
               textAlign="center"
               fontSize="6xl"
               m="0"
-              bgGradient="linear(to bottom, #FFF455, #FFC700, #EE6E4E)"
+              bgGradient="linear(to bottom, #FFB703, #FB8500)"
               bgClip="text"
             >
               I am Cody Miller

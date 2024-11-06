@@ -9,25 +9,40 @@ const Resume = () => {
         <ChakraLink href="src/assets/Resume.pdf" download>
           <Button
             leftIcon={<FaDownload />}
-            fontFamily="Montserrat Alternates"
-            color="rgba(24, 25, 26, 0.8)"
-            fontSize="1rem"
-            bgGradient="linear(to bottom, #FFF455, #FFC700, #EE4E4E)"
+            fontFamily="Montserrat"
+            fontSize="1.1rem"
+            bgGradient="linear(to bottom, #FFB703, #FB8500)"
             _hover={{
-              bgGradient: "linear(to bottom, #FFC700, #EE4E4E)",
+              transform: "scale(1.03)",
             }}
+            _active={{
+              color: "#FFB703",
+            }}
+            padding="1.5rem"
+            color="#023047"
+            border="15px solid"
+            borderColor="#023047"
           >
             Download Résumé
           </Button>
         </ChakraLink>
       </Box>
-      <Box textAlign="center" mb="2rem" display="flex" justifyContent="center">
+      <Box
+        textAlign="center"
+        mb="2rem"
+        display="flex"
+        justifyContent="center"
+        
+      >
         <iframe
           src="https://drive.google.com/file/d/11MG0DFHX_Xmw-Prt1eCdX9-6NrV0ToqQ/preview"
           width="800rem"
           height="600rem"
-          style={{ border: "none" }}
-          // allow="autoplay"
+          style={{
+            border: "20px solid",
+            borderColor: "#023047",
+            borderRadius:"10px"
+          }}
         ></iframe>
       </Box>
     </>

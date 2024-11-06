@@ -14,7 +14,7 @@ function Contact() {
       alignItems="center"
       justifyContent="center"
       background="transparent"
-      height="70vh"
+      height="50vh"
       boxShadow="none"
     >
       <CardBody
@@ -25,22 +25,25 @@ function Contact() {
         boxShadow="dark-lg"
         margin="3rem"
       >
-        <Text
-          fontSize="7rem"
-          fontFamily="Montserrat"
-          p="1rem"
-          letterSpacing="2px"
-        >
-          Cody Miller
-        </Text>
-        <Text
+        <Heading
           textAlign="center"
           color="white"
-          fontSize="1.5rem"
-          fontWeight="semi-bold"
-          m="1rem"
+          fontSize="5xl"
+          bgGradient="linear(to bottom, #FFB703, #FB8500)"
+          bgClip="text"
+          mt="3rem"
+          mb=".5rem"
         >
-          Get in touch with me here — I’d love to chat!
+          Get in touch with me here
+        </Heading>
+        <Text
+          fontSize="md"
+          fontFamily="Montserrat"
+          fontWeight="450"
+          color="white"
+          textAlign="center"
+        >
+          I would love to chat
         </Text>
         <Stack
           direction="row"
@@ -89,6 +92,16 @@ function Contact() {
             target="_blank"
           />
         </Stack>
+        <Text
+          fontSize="md"
+          fontFamily="Montserrat"
+          fontWeight="450"
+          color="white"
+          mt="3.5rem"
+          textAlign="center"
+        >
+          Talk to you soon!
+        </Text>
       </CardBody>
     </Card>
   );

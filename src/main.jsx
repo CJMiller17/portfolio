@@ -52,20 +52,6 @@ const customTheme = extendTheme({
       /* Repeat the above .firefly:nth-child(n) styles for 2 to 15 */
     },
   },
-  components: {
-    Text: {
-      baseStyle: {
-        fontSize: { base: "sm", sm: "2xl", md: "2xl", lg: "2xl" },
-        fontWeight: "bold",
-        bgGradient: "linear(to bottom, #FFF455, #FFC700, #ee6e4e)",
-        bgClip: "text",
-        transition: "transform 0.2s ease-in-out",
-        _hover: {
-          bgGradient: "linear(to bottom, #FFC700, #EE4E4E)",
-        },
-      },
-    },
-  },
 });
 
 

@@ -4,7 +4,10 @@ import { SimpleGrid, Card, Image, Modal, ModalOverlay,
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter, HStack, Badge, Stack, Button, Heading, Text, CardBody, CardFooter, Wrap } from "@chakra-ui/react";
+  ModalFooter,
+  Box,
+  HStack, Badge, Stack, Button, Heading, Text, CardBody, CardFooter, Wrap
+} from "@chakra-ui/react";
 
 import Birding from "./assets/Birding.png";
 import StoryGen from "./assets/Story.png"
@@ -112,8 +115,27 @@ export default function ProjectsCarousel() {
 
   return (
     <>
+      <Box
+        bg="#023047"
+        color="white"
+        py="1"
+        px="8"
+        borderRadius="md"
+        m="8"
+        maxWidth="90%"
+        mx="auto"
+        textAlign="center"
+      >
+        <Heading
+          fontSize="5xl"
+          bgGradient="linear(to bottom, #FFB703, #FB8500)"
+          bgClip="text"
+        >
+          Here's what I have been up to
+        </Heading>
+      </Box>
       <SimpleGrid columns={{ base: 1, sm: 1, md: 2, lg: 3 }} spacing=".5">
-        {elevatedCards.map((card , index) => (
+        {elevatedCards.map((card, index) => (
           <Card
             key={index}
             direction={{ base: "column", sm: "row" }} // Stack column for small screens, row for larger screens
@@ -135,27 +157,22 @@ export default function ProjectsCarousel() {
                 style={{
                   width: "100%",
                   height: "200px",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
             ) : (
-             <Image
+              <Image
                 src={card.image}
                 alt={card.title}
                 objectFit="cover"
                 width="100%"
                 height="200px"
                 mt="1rem"
-              />   
-            )
-            }
+              />
+            )}
             <Stack p="4">
               <CardBody mt="-10" maxH="120px">
-                <Heading
-                  size="md"
-                  noOfLines={1}
-                  color="white"
-                >
+                <Heading size="md" noOfLines={1} color="white">
                   {card.title}
                 </Heading>
                 <Text
@@ -166,7 +183,11 @@ export default function ProjectsCarousel() {
                 >
                   {card.text}
                 </Text>
-                <Button color="black" variant="link" onClick={() => setIsModalOpen(index)}>
+                <Button
+                  color="black"
+                  variant="link"
+                  onClick={() => setIsModalOpen(index)}
+                >
                   See More
                 </Button>
 
