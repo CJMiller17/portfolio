@@ -20,7 +20,7 @@ import ToDoList from "./assets/ToDo.png";
 import Social from "./assets/Social.png";
 import Prince from "./assets/Prince.png";
 import GeoDash from "./assets/GeoDash.png";
-import GeoDashDemo from "./assets/GeoDashDemo.mov";
+import GeoDashDemo from "./assets/GeoDashDemo.webm";
 
 
 // import Birding from "./assets/Birding_screenshot.png";
@@ -158,6 +158,7 @@ export default function ProjectsCarousel() {
                   width: "100%",
                   height: "200px",
                   objectFit: "cover",
+                  marginTop: "1rem",
                 }}
               />
             ) : (
@@ -172,7 +173,14 @@ export default function ProjectsCarousel() {
             )}
             <Stack p="4">
               <CardBody mt="-10" maxH="120px">
-                <Heading size="md" noOfLines={1} color="white">
+                <Heading
+                  size="md"
+                  noOfLines={1}
+                  color="white"
+                  textAlign="center"
+                  bgGradient="linear(to bottom, #FFB703, #FB8500)"
+                  bgClip="text"
+                >
                   {card.title}
                 </Heading>
                 <Text
@@ -184,8 +192,11 @@ export default function ProjectsCarousel() {
                   {card.text}
                 </Text>
                 <Button
-                  color="black"
-                  variant="link"
+                  color="white"
+                  variant="unstyled"
+                  border="none"
+                  fontSize=".8rem"
+                  _hover={{ textDecoration: "underline", color: "#FFB703" }}
                   onClick={() => setIsModalOpen(index)}
                 >
                   See More
@@ -219,10 +230,26 @@ export default function ProjectsCarousel() {
               </CardBody>
               <CardFooter mt="10">
                 <HStack mt="4" spacing="4" justifyContent="flex-end">
-                  <Button as="a" href={card.liveLink} target="_blank">
+                  <Button
+                    as="a"
+                    href={card.liveLink}
+                    target="_blank"
+                    variant="outline"
+                    color="white"
+                    textDecoration="none"
+                    _hover={{ color: "#FFB703", borderColor: "#FFB703" }}
+                  >
                     Live
                   </Button>
-                  <Button as="a" href={card.githubLink} target="_blank">
+                  <Button
+                    as="a"
+                    href={card.githubLink}
+                    target="_blank"
+                    variant="outline"
+                    color="white"
+                    textDecoration="none"
+                    _hover={{ color: "#FFB703", borderColor: "#FFB703" }}
+                  >
                     Code
                   </Button>
                 </HStack>

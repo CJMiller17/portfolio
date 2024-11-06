@@ -27,21 +27,15 @@ const Resume = () => {
           </Button>
         </ChakraLink>
       </Box>
-      <Box
-        textAlign="center"
-        mb="2rem"
-        display="flex"
-        justifyContent="center"
-        
-      >
+      <Box textAlign="center" mb="2rem" display="flex" justifyContent="center">
         <iframe
-          src="https://drive.google.com/file/d/11MG0DFHX_Xmw-Prt1eCdX9-6NrV0ToqQ/preview"
+          src="https://drive.google.com/file/d/1CN6rDiMZlcF4IJ94FLt4LGJAbnHyVaSt/preview"
           width="800rem"
           height="600rem"
           style={{
             border: "20px solid",
             borderColor: "#023047",
-            borderRadius:"10px"
+            borderRadius: "10px",
           }}
         ></iframe>
       </Box>
