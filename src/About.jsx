@@ -11,7 +11,7 @@ import {
 const About = () => {
   const aboutSections = [
     {
-      imgSrc: "src/assets/FamilyPhoto.jpeg",
+      imgSrc: "src/assets/FamilyPhoto.jpg",
       imgAlt: "Family Photo",
       text: "I'm a full-stack developer based in Kentucky with a beautiful wife and two amazing kids. I’m passionate about development: international, community, personal and especially web.",
     },
@@ -21,17 +21,17 @@ const About = () => {
       text: "International travel is a big part of my life. I’ve built orphanages, invested in women’s businesses, distributed food, and helped settle refugees.",
     },
     {
-      imgSrc: "src/assets/MiddleSchool.jpeg",
+      imgSrc: "src/assets/MiddleSchool.jpg",
       imgAlt: "Helping at Middle School",
       text: "Giving back to my community is essential to me. I volunteer at middle schools, support at-risk youth, and help raise funds for local charities.",
     },
     {
-      imgSrc: "src/assets/Personal.png",
+      imgSrc: "src/assets/Personal.jpg",
       imgAlt: "Reading Books",
       text: "A mentor once said, 'Readers are leaders.' That stayed with me, so you’ll always find me reading, learning, and striving to grow.",
     },
     {
-      imgSrc: "src/assets/WebDev.png",
+      imgSrc: "src/assets/WebDev.jpg",
       imgAlt: "Coding",
       text: "Web development is my passion. It’s a field full of endless opportunities to learn and improve, which I love.",
     },
