@@ -82,8 +82,28 @@ const About = () => {
                   src={section.imgSrc}
                   alt={section.imgAlt}
                   borderRadius="full"
+                  sx={{
+                    ":hover": {
+                      animation: "flip 1.5s ease-in-out 1", // 3 full rotations, stops after 3 spins
+                    },
+                    "@keyframes flip": {
+                      "0%": {
+                        transform: "perspective(400px) rotateY(0deg)", // Start at the original position
+                      },
+                      "100%": {
+                        transform: "perspective(400px) rotateY(720deg)", // End at the original position
+                      },
+                    },
+                  }}
                 />
-                <Text fontSize="md" fontFamily="Montserrat" fontWeight="450" color="white" maxW="sm">
+
+                <Text
+                  fontSize="md"
+                  fontFamily="Montserrat"
+                  fontWeight="450"
+                  color="white"
+                  maxW="sm"
+                >
                   {section.text}
                 </Text>
               </Flex>

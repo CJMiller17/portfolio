@@ -1,11 +1,27 @@
 import * as React from "react";
-import { IconButton, Link, Card, CardBody, Text, Heading, Stack } from "@chakra-ui/react";
-import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
+import {
+  IconButton,
+  Link,
+  Card,
+  CardBody,
+  Text,
+  Heading,
+  Stack,
+  Image,
+} from "@chakra-ui/react";
+import GithubIcon from "../src/assets/github.svg";
+import LinkedinIcon from "../src/assets/linkedin.svg";
+import EmailIcon from "../src/assets/google.svg";
 
-
-
+const contacts = [
+  { icon: EmailIcon, label: "Email", href: "mailto:C.JMiller17@yahoo.com" },
+  {
+    icon: LinkedinIcon,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/cjmiller17/",
+  },
+  { icon: GithubIcon, label: "GitHub", href: "https://github.com/CJMiller17" },
+];
 
 function Contact() {
   return (
@@ -18,8 +34,6 @@ function Contact() {
       boxShadow="none"
     >
       <CardBody
-        // py={{ base: "0", sm: "8" }}
-        // px={{ base: "4", sm: "4" }}
         bg="#023047"
         borderRadius="lg"
         boxShadow="dark-lg"
@@ -51,46 +65,38 @@ function Contact() {
           justifyContent="space-around"
           margin="1rem"
         >
-          <IconButton
-            className="icon-button"
-            variant="ghost"
-            aria-label="Done"
-            fontSize="6.7rem"
-            mt="1.5rem"
-            icon={<MdEmail color="white" />}
-            as={Link}
-            href="mailto:C.JMiller17@yahoo.com"
-            target="_blank"
-            _hover={{
-              bgGradient: "transparent",
-            }}
-          />
-
-          <IconButton
-            className="icon-button"
-            variant="ghost"
-            aria-label="Done"
-            mt="1.5rem"
-            fontSize="5.7rem"
-            icon={<FaLinkedin color="white" />}
-            _hover={{ bgColor: "transparent" }}
-            as={Link}
-            href="https://www.linkedin.com/in/cjmiller17/"
-            target="_blank"
-          />
-
-          <IconButton
-            className="icon-button"
-            variant="ghost"
-            aria-label="Done"
-            mt="1.5rem"
-            fontSize="5.7rem"
-            icon={<FaGithub color="white" />}
-            _hover={{ bgColor: "transparent" }}
-            as={Link}
-            href="https://github.com/CJMiller17"
-            target="_blank"
-          />
+          {contacts.map(({ icon, label, href }) => (
+            <IconButton
+              key={label}
+              variant="ghost"
+              aria-label={label}
+              mt="1.5rem"
+              as={Link}
+              href={href}
+              target="_blank"
+              icon={
+                <Image
+                  src={icon}
+                  alt={label}
+                  boxSize="6rem"
+                  sx={{
+                    ":hover": {
+                      animation: "hithere 1s ease 1",
+                    },
+                    "@keyframes hithere": {
+                      "30%": { transform: "scale(1.2)" },
+                      "40%": { transform: "rotate(-20deg) scale(1.2)" },
+                      "50%": { transform: "rotate(20deg) scale(1.2)" },
+                      "60%": { transform: "rotate(-20deg) scale(1.2)" },
+                      "70%": { transform: "rotate(0deg) scale(1.2)" },
+                      "100%": { transform: "scale(1)" },
+                    },
+                  }}
+                />
+              }
+              _hover={{ bg: "none" }}
+            />
+          ))}
         </Stack>
         <Text
           fontSize="md"
@@ -107,4 +113,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;
