@@ -7,6 +7,8 @@ import {
   Image
 } from "@chakra-ui/react";
 
+import HomePageImg from "./assets/HomePage.jpeg"
+
 const Homepage = () => {
   
   return (
@@ -56,7 +58,7 @@ const Homepage = () => {
             <Image
               boxSize="250px"
               objectFit="cover"
-              src="src/assets/HomePage.jpeg"
+              src={HomePageImg}
               alt="A picture of myself holding my son. We are both wearing a blue sweater"
               borderRadius="50px"
               alignSelf="center"

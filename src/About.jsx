@@ -8,30 +8,37 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import FamilyPhoto from "./assets/FamilyPhoto.jpg";
+import Development from "./assets/Development.jpeg";
+import MiddleSchool from "./assets/MiddleSchool.jpg";
+import Personal from "./assets/Personal.jpg";
+import WebDev from "./assets/WebDev.jpg";
+
+
 const About = () => {
   const aboutSections = [
     {
-      imgSrc: "src/assets/FamilyPhoto.jpg",
+      imgSrc: FamilyPhoto,
       imgAlt: "Family Photo",
       text: "I'm a full-stack developer based in Kentucky with a beautiful wife and two amazing kids. I’m passionate about development: international, community, personal and especially web.",
     },
     {
-      imgSrc: "src/assets/Development.jpeg",
+      imgSrc: Development,
       imgAlt: "Development Work",
       text: "International travel is a big part of my life. I’ve built orphanages, invested in women’s businesses, distributed food, and helped settle refugees.",
     },
     {
-      imgSrc: "src/assets/MiddleSchool.jpg",
+      imgSrc: MiddleSchool,
       imgAlt: "Helping at Middle School",
       text: "Giving back to my community is essential to me. I volunteer at middle schools, support at-risk youth, and help raise funds for local charities.",
     },
     {
-      imgSrc: "src/assets/Personal.jpg",
+      imgSrc: Personal,
       imgAlt: "Reading Books",
       text: "A mentor once said, 'Readers are leaders.' That stayed with me, so you’ll always find me reading, learning, and striving to grow.",
     },
     {
-      imgSrc: "src/assets/WebDev.jpg",
+      imgSrc: WebDev,
       imgAlt: "Coding",
       text: "Web development is my passion. It’s a field full of endless opportunities to learn and improve, which I love.",
     },
@@ -88,10 +95,12 @@ const About = () => {
                     },
                     "@keyframes flip": {
                       "0%": {
-                        transform: "perspective(400px) rotateY(0deg)", // Start at the original position
+                        transform:
+                          "perspective(400px) rotateY(0deg)", // Start at the original position
                       },
                       "100%": {
-                        transform: "perspective(400px) rotateY(720deg)", // End at the original position
+                        transform:
+                          "perspective(400px) rotateY(360deg)", // End at the original position
                       },
                     },
                   }}
