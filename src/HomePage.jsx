@@ -3,14 +3,20 @@ import {
   Container,
   Heading,
   Stack,
-  Text,
-  Image
+  Image,
+  HStack,
+  Link,
 } from "@chakra-ui/react";
-
-import HomePageImg from "./assets/HomePage.jpeg"
+import HomePageImg from "./assets/HomePage.jpeg";
+import { Link as RouterLink } from "react-router-dom";
 
 const Homepage = () => {
-  
+  const ctas = [
+    { text: "Explore my work.", link: "/projects" },
+    { text: "Discover my skills.", link: "/resume" },
+    { text: "Connect with me.", link: "/contact" },
+  ];
+
   return (
     <Container
       zIndex="10"
@@ -55,28 +61,36 @@ const Homepage = () => {
             >
               Welcome to My Portfolio
             </Heading>
-            <Image
-              boxSize="250px"
-              objectFit="cover"
-              src={HomePageImg}
-              alt="A picture of myself holding my son. We are both wearing a blue sweater"
-              borderRadius="50px"
-              alignSelf="center"
-            />
-            <Text
-              fontFamily="Montserrat"
-              fontSize="lg"
-              fontWeight="250"
-              color="white"
-              textAlign="center"
-            >
-              Feel free to look around and get to know me!
-            </Text>
+            <Link as={RouterLink} to="/about" alignSelf="center" margin="2rem">
+              <Image
+                boxSize="250px"
+                objectFit="cover"
+                src={HomePageImg}
+                alt="A picture of myself holding my son. We are both wearing a blue sweater"
+                borderRadius="50px"
+              />
+            </Link>
+            <HStack spacing="14" justify="center">
+              {ctas.map((cta, index) => (
+                <Link
+                  as={RouterLink}
+                  to={cta.link}
+                  key={index}
+                  fontFamily="Montserrat"
+                  fontSize="lg"
+                  fontWeight="250"
+                  color="white"
+                  textAlign="center"
+                >
+                  {cta.text}
+                </Link>
+              ))}
+            </HStack>
           </Stack>
         </Box>
       </Stack>
     </Container>
   );
-}
+};
 
-export default Homepage
+export default Homepage;

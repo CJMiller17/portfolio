@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Box, Text } from "@chakra-ui/react";
 
-function NavItem({ to, children, fontSize="1.2rem" }) {
+function NavItem({ to, children, fontSize = [".7rem", "1rem", "1.2rem", "1.4rem"] }) {
   return (
     <Text
       as={Link}
@@ -9,7 +9,7 @@ function NavItem({ to, children, fontSize="1.2rem" }) {
       fontFamily="Montserrat"
       letterSpacing="2px"
       fontSize={fontSize}
-      mt=".5rem"
+      m=".5rem .2rem"
       bgGradient="linear(to bottom, #FFB703, #FB8500)"
       bgClip="text"
       transition="transform 0.2s ease"
@@ -34,8 +34,9 @@ function NavBar() {
       bg="#023047"
       alignItems="center"
       boxShadow="2xl"
+      padding="1rem"
     >
-      <NavItem to="/" fontSize="2rem">
+      <NavItem to="/" fontSize={["1.5rem", "2rem", "2.5rem"]}>
         Cody Miller
       </NavItem>
       <NavItem to="/about">About</NavItem>

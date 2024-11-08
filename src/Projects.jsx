@@ -35,6 +35,8 @@ export default function ProjectsCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(null);
   const [hovered, setHovered] = useState(null);
 
+  const isMobile = window.innerWidth < 768
+
   const projects = [
     {
       title: "Adventure Game",
@@ -46,13 +48,13 @@ export default function ProjectsCarousel() {
       githubLink: "https://github.com/CJMiller17/little-prince-client",
     },
     {
-      title: "Birding Website",
-      desc: "A visually engaging birding website that brings together HTML, CSS, and JavaScript to create an interactive, user-friendly experience. This multi-page site lets users click through beautiful bird images and navigate effortlessly, showcasing a keen eye for design and responsive layouts. Built for enthusiasts, it also emphasizes aesthetic appeal and ease of use across devices.",
-      image: Birding,
-      video: BirdingDemo,
-      techStack: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://cjmiller17.github.io/Birding/",
-      githubLink: "https://github.com/CJMiller17/Birding",
+      title: "GeoDash World",
+      desc: "GeoDash World is a customizable city exploration tool, developed using React and Node.js, that gamifies local learning with quizzes and scavenger hunts. Leveraging MongoDB and hosted on Render, it provides a dynamic map-based interface that allows users to discover landmarks, neighborhoods, and hidden gems. This project combines location-based education with interactive user engagement for a unique city experience.",
+      image: GeoDash,
+      video: GeoDashDemo,
+      techStack: ["React", "Node.js", "Render", "MongoDB"],
+      liveLink: "https://geodash-world-client-development.onrender.com/",
+      githubLink: "https://github.com/chingu-voyages/v51-tier3-team-34",
     },
     {
       title: "Random Story Generator",
@@ -64,13 +66,13 @@ export default function ProjectsCarousel() {
       githubLink: "https://github.com/CJMiller17/Silly-Story",
     },
     {
-      title: "GeoDash World",
-      desc: "GeoDash World is a customizable city exploration tool, developed using React and Node.js, that gamifies local learning with quizzes and scavenger hunts. Leveraging MongoDB and hosted on Render, it provides a dynamic map-based interface that allows users to discover landmarks, neighborhoods, and hidden gems. This project combines location-based education with interactive user engagement for a unique city experience.",
-      image: GeoDash,
-      video: GeoDashDemo,
-      techStack: ["React", "Node.js", "Render", "MongoDB"],
-      liveLink: "https://geodash-world-client-development.onrender.com/",
-      githubLink: "https://github.com/chingu-voyages/v51-tier3-team-34",
+      title: "Birding Website",
+      desc: "A visually engaging birding website that brings together HTML, CSS, and JavaScript to create an interactive, user-friendly experience. This multi-page site lets users click through beautiful bird images and navigate effortlessly, showcasing a keen eye for design and responsive layouts. Built for enthusiasts, it also emphasizes aesthetic appeal and ease of use across devices.",
+      image: Birding,
+      video: BirdingDemo,
+      techStack: ["HTML", "CSS", "JavaScript"],
+      liveLink: "https://cjmiller17.github.io/Birding/",
+      githubLink: "https://github.com/CJMiller17/Birding",
     },
     // Additional projects commented out as per original code
   ];
@@ -93,7 +95,8 @@ export default function ProjectsCarousel() {
           bgGradient="linear(to bottom, #FFB703, #FB8500)"
           bgClip="text"
         >
-          Here's what I have been up to
+          Here's what I've been up to
+          <Text fontSize=".7rem" letterSpacing={3}>Hover over image for demo</Text>
         </Heading>
       </Box>
       <SimpleGrid columns={{ base: 1, sm: 1, md: 2, lg: 3 }} spacing=".5">
@@ -110,7 +113,7 @@ export default function ProjectsCarousel() {
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
           >
-            {hovered === index && project.video ? (
+            {isMobile || (hovered === index && project.video) ? (
               <video
                 src={project.video}
                 autoPlay
@@ -207,6 +210,7 @@ export default function ProjectsCarousel() {
                       borderColor="#8ECAE6"
                       borderRadius="lg"
                       key={i}
+                      mb={{ base: 2, md: 0 }}
                     >
                       {tech}
                     </Badge>
@@ -223,6 +227,7 @@ export default function ProjectsCarousel() {
                     color="white"
                     textDecoration="none"
                     _hover={{ color: "#FFB703", borderColor: "#FFB703" }}
+                    mt={6}
                   >
                     Live
                   </Button>
@@ -234,6 +239,7 @@ export default function ProjectsCarousel() {
                     color="white"
                     textDecoration="none"
                     _hover={{ color: "#FFB703", borderColor: "#FFB703" }}
+                    mt={6}
                   >
                     Code
                   </Button>

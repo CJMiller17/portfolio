@@ -32,6 +32,7 @@ function Contact() {
       background="transparent"
       height="50vh"
       boxShadow="none"
+      mt="5rem"
     >
       <CardBody
         bg="#023047"

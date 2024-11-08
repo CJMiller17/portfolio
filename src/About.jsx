@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Container,
   Stack,
@@ -16,16 +18,17 @@ import WebDev from "./assets/WebDev.jpg";
 
 
 const About = () => {
+
   const aboutSections = [
     {
       imgSrc: FamilyPhoto,
       imgAlt: "Family Photo",
-      text: "I'm a full-stack developer based in Kentucky with a beautiful wife and two amazing kids. I’m passionate about development: international, community, personal and especially web.",
+      text: "I'm a full-stack developer based in Kentucky with a beautiful wife and an amazing son. I’m passionate about all kinds of development: international, community, personal and especially web.",
     },
     {
       imgSrc: Development,
       imgAlt: "Development Work",
-      text: "International travel is a big part of my life. I’ve built orphanages, invested in women’s businesses, distributed food, and helped settle refugees.",
+      text: "International travel is a big part of my life. I’ve help build orphanages, invested in women’s businesses, distributed food, and helped settle refugees.",
     },
     {
       imgSrc: MiddleSchool,
@@ -89,21 +92,6 @@ const About = () => {
                   src={section.imgSrc}
                   alt={section.imgAlt}
                   borderRadius="full"
-                  sx={{
-                    ":hover": {
-                      animation: "flip 1.5s ease-in-out 1", // 3 full rotations, stops after 3 spins
-                    },
-                    "@keyframes flip": {
-                      "0%": {
-                        transform:
-                          "perspective(400px) rotateY(0deg)", // Start at the original position
-                      },
-                      "100%": {
-                        transform:
-                          "perspective(400px) rotateY(360deg)", // End at the original position
-                      },
-                    },
-                  }}
                 />
 
                 <Text
