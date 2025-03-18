@@ -6,7 +6,7 @@ const Resume = () => {
   return (
     <>
       <Box m="1rem" display="flex" justifyContent="center">
-        <ChakraLink href="src/assets/Resume.pdf" download>
+        <ChakraLink href="src/assets/Resume_Web_Developer.pdf" download>
           <Button
             leftIcon={<FaDownload />}
             fontFamily="Montserrat"
@@ -29,7 +29,7 @@ const Resume = () => {
       </Box>
       <Box textAlign="center" mb="2rem" display="flex" justifyContent="center">
         <iframe
-          src="https://drive.google.com/file/d/1CN6rDiMZlcF4IJ94FLt4LGJAbnHyVaSt/preview"
+          src="https://drive.google.com/file/d/12RqOeP08W1iBUN1XUzhxa_7x5uSCILA_/preview"
           width="800rem"
           height="600rem"
           style={{

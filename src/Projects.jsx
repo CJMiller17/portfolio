@@ -30,6 +30,11 @@ import Prince from "./assets/AdventureGame.jpg";
 import PrinceDemo from "./assets/AdventureGameDemo.webm";
 import GeoDash from "./assets/GeoDash.png";
 import GeoDashDemo from "./assets/GeoDashDemo.webm";
+import ForeYou from "./assets/ForeYou.jpg";
+import ForeYouDemo from "./assets/ForeYouDemo.webm";
+import CanonLaw from "./assets/CanonLaw.jpg";
+import CanonLawDemo from "./assets/CanonLawDemo.webm";
+
 
 export default function ProjectsCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(null);
@@ -38,6 +43,24 @@ export default function ProjectsCarousel() {
   const isMobile = window.innerWidth < 768
 
   const projects = [
+    {
+      title: "ForeYou Budgeting App",
+      desc: "ForeYou is a financial planning app that eliminates the need for traditional budgeting. It features an intelligent transaction register that forecasts balances, tracks spending habits, and provides insightful reports. It helps users make informed financial decisions with a forward-looking approach. ForeYou also offers educational resources and personalized financial counseling.",
+      image: ForeYou,
+      video: ForeYouDemo,
+      techStack: ["Ionic", "Firebase", "PostgreSQL", "Typescript"],
+      liveLink: "https://foreyou.ai/",
+      githubLink: "hidden",
+    },
+    {
+      title: "Carolingian Canon Law Project",
+      desc: "A humanities project exploring the legal texts of the Carolingian era. This project organizes, analyzes, and visualizes historical canon law manuscripts, providing an interactive way to view, transcribe, translate, and annotate medieval folia. Built with Blaze components and MeteorJS, it offers researchers and historians an accessible platform to navigate and interpret these foundational texts.",
+      image: CanonLaw,
+      video: CanonLawDemo,
+      techStack: ["Meteor", "Blaze", "MongoDB", "Typescript"],
+      liveLink: "https://ccl.rch.uky.edu/",
+      githubLink: "hidden",
+    },
     {
       title: "Adventure Game",
       desc: "This 'Le Petit Prince' themed game immerses players in a rich story-driven environment, blending React's powerful UI components with Django's robust back-end to create seamless data handling and interactivity. Players engage with real-time decision-making and a responsive interface, demonstrating my full-stack capabilities. Hosted on Fly.io, this project showcases an intricate front-to-back integration essential for scalable applications.",
@@ -74,7 +97,6 @@ export default function ProjectsCarousel() {
       liveLink: "https://cjmiller17.github.io/Birding/",
       githubLink: "https://github.com/CJMiller17/Birding",
     },
-    // Additional projects commented out as per original code
   ];
 
   return (
@@ -231,6 +253,7 @@ export default function ProjectsCarousel() {
                   >
                     Live
                   </Button>
+                  {project.githubLink !== "hidden" && (
                   <Button
                     as="a"
                     href={project.githubLink}
@@ -242,7 +265,8 @@ export default function ProjectsCarousel() {
                     mt={6}
                   >
                     Code
-                  </Button>
+                    </Button>
+                  )}
                 </HStack>
               </CardFooter>
             </Stack>
